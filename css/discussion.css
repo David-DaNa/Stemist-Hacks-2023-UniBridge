@@ -17,12 +17,12 @@ body {
     align-items: center;
     background-color: transparent;
     padding: 10px;
-    color: #fff;
+    color: black;
 }
 
 .menu-bar a {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 .menu-items {
@@ -141,24 +141,39 @@ body {
 ul.beautiful-links {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 ul.beautiful-links li {
     display: inline-block;
-    margin: 10px;
+   
 }
 
 ul.beautiful-links li a {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #1e96fc;
-    color: #fff;
+    background-color: transparent;
+    color: black;
     transition: background-color 0.3s ease;
 }
 
 ul.beautiful-links li a:hover {
-    background-color: #003666;
-    color: white;
+    color: blue;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #000; /* You can change the border color here */
+}
+
+.profile-name {
+    margin-left: 10px;
+    font-size: 18px;
 }
