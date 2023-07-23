@@ -278,3 +278,46 @@ document.addEventListener('DOMContentLoaded', () => {
     postsTab.addEventListener('click', showPosts);
     aboutTab.addEventListener('click', showAbout);
 });
+
+// JavaScript for Modal functionality
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+}
+
+function saveInterests() {
+    const interestsInput = document.getElementById('interestsInput');
+    const interestsList = document.getElementById('interestsList');
+    interestsList.innerHTML = '';
+
+    for (const option of interestsInput.options) {
+        if (option.selected) {
+            const interest = document.createElement('li');
+            interest.textContent = option.value;
+            interestsList.appendChild(interest);
+        }
+    }
+
+    closeModal('editInterestsModal');
+}
+
+function saveEducation() {
+    const educationYearInput = document.getElementById('educationYearInput').value;
+    const educationSubjectsInput = document.getElementById('educationSubjectsInput').value;
+    const educationAcademicTypeInput = document.getElementById('educationAcademicTypeInput').value;
+    const educationGradesInput = document.getElementById('educationGradesInput').value;
+
+    document.getElementById('educationYear').textContent = educationYearInput;
+    document.getElementById('educationSubjects').textContent = educationSubjectsInput;
+    document.getElementById('educationAcademicType').textContent = educationAcademicTypeInput;
+    document.getElementById('educationGrades').textContent = educationGradesInput;
+
+    closeModal('editEducationModal');
+}
+
+// Additional JavaScript for your existing functionality can go here...

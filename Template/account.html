@@ -13,15 +13,19 @@
 
 <body>
   <header>
-    <nav>
-      <h1>UniBridge</h1>
-    </nav>
+  <a href="https://frontend-hackathon.thetpaingdana.repl.co/Template/discussion.html" id="logo-link">
+    <img src="../Assets/Unibridge_Logo_png.png" alt="Logo" width="200" height="100" id="logo-image">
+  </a>
   </header>
-
   <main>
     
     <!-- User Profile Section -->
     <section class="user-profile">
+       <div class="profile-image" style="background-image: url('default_cover_photo.jpg');">
+        <!-- Add the default cover photo image -->
+        <div class="edit-cover-photo">
+            <button onclick="openModal('changeCoverPhotoModal')">Change Cover Photo</button>
+        </div>
         <div class="profile-image">
                 <label for="profilePictureInput">
                     <img id="profilePicture" src="profile_picture.jpg" alt="Profile Picture">
@@ -74,27 +78,63 @@
     </section>
   </section>
 
-    <!-- About Section -->
+ <!-- About Section -->
     <div class="about-section" id="aboutSection">
-      <!-- Interests Section -->
-    <div class="interests-section">
-      <h3>Interests</h3>
-      <ul id="interestsList">
-        <!-- Interests will be dynamically added here -->
-      </ul>
-      <button onclick="editInterests()">Edit Interests</button>
-    </div>
-    
-    <!-- Education Section -->
-    <div class="education-section">
-      <h3>Education</h3>
-      <p>Year: <span id="educationYear">Class of 2023</span></p>
-      <p>Subjects: <span id="educationSubjects">Computer Science, Mathematics, Physics</span></p>
-      <p>Academic Type: <span id="educationAcademicType">IB</span></p>
-      <p>Grades: <span id="educationGrades">A, A, B</span></p>
-      <button onclick="editEducation()">Edit Education</button>
-    </div>
+        <!-- Interests Section -->
+        <div class="interests-section">
+            <h3>Interests</h3>
+            <ul id="interestsList">
+                <!-- Interests will be dynamically added here -->
+            </ul>
+            <button onclick="openModal('editInterestsModal')">Edit Interests</button>
+        </div>
 
+        <!-- Education Section -->
+        <div class="education-section">
+            <h3>Education</h3>
+            <p>Year: <span id="educationYear">Class of 2023</span></p>
+            <p>Subjects: <span id="educationSubjects">Computer Science, Mathematics, Physics</span></p>
+            <p>Academic Type: <span id="educationAcademicType">IB</span></p>
+            <p>Grades: <span id="educationGrades">A, A, B</span></p>
+            <button onclick="openModal('editEducationModal')">Edit Education</button>
+        </div>
+
+ <!-- Edit Interests Modal -->
+<div id="editInterestsModal" class="modal">
+    <div class="modal-content">
+        <h2>Edit Interests</h2>
+        <label for="interestsInput">Select your interests:</label>
+        <select id="interestsInput" size="6" multiple>
+            <option value="Music">Music</option>
+            <option value="Photography">Photography</option>
+            <option value="Sports">Sports</option>
+            <option value="Technology">Technology</option>
+            <option value="Arts">Arts</option>
+            <option value="Drama">Drama</option>
+            <!-- Add more interests as needed -->
+        </select>
+        <button onclick="saveInterests()">Save</button>
+        <button onclick="closeModal('editInterestsModal')">Cancel</button>
+    </div>
+</div>
+
+      
+<!-- Edit Education Modal -->
+<div id="editEducationModal" class="modal">
+    <div class="modal-content">
+        <h2>Edit Education</h2>
+        <label for="educationYearInput">Year:</label>
+        <input type="text" id="educationYearInput">
+        <label for="educationSubjectsInput">Subjects:</label>
+        <input type="text" id="educationSubjectsInput">
+        <label for="educationAcademicTypeInput">Academic Type:</label>
+        <input type="text" id="educationAcademicTypeInput">
+        <label for="educationGradesInput">Grades:</label>
+        <input type="text" id="educationGradesInput">
+        <button onclick="saveEducation()">Save</button>
+        <button onclick="closeModal('editEducationModal')">Cancel</button>
+    </div>
+</div>
   </section>
 </main>
   

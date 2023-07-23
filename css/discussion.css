@@ -1,102 +1,164 @@
+/* Style for the navigation bar */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-color: #f0f0f0;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/003/127/954/original/abstract-template-blue-background-white-squares-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 .menu-bar {
-    background-color: #1e96fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
     padding: 10px;
+    color: #fff;
 }
 
-.menu-bar ul {
+.menu-bar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-items {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-.menu-bar li {
-    display: inline;
-    margin-right: 15px;
+.menu-items li {
+    margin-right: 20px;
 }
 
-.menu-bar li a {
-    color: #0a0000;
-    text-decoration: none;
+.menu-items li:last-child {
+    margin-right: 0;
 }
 
+/* Style for the discussion posts container */
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr 300px; /* Main content area and sidebar */
-    grid-gap: 20px;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
 }
+
 .discussion-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-coulmn-gap: 20px;
-  grid-row-gap:20px;
-  padding: 20px;
-  background-color: #2a97ea;
+  width: 70%;
+  padding-right: 20px;
 }
 
+/* Style for individual discussion posts */
 .discussion-post {
-    border: 1px solid #ccc;
-  background-color: #fcf300;
-    padding: 20px;
-    width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.reactions {
-    margin: 10px 0;
+/* Style for the sidebar */
+.sidebar {
+  width: 40%;
+  background-color: #f9f9f9;
+  border: 1px solid #1e96fc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.reaction-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    margin-right: 10px;
-    cursor: pointer;
+/* Style for the sidebar links */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Style for the clickable logo */
+.menu-bar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style for the reaction and action buttons */
+.reactions,
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reaction-button,
+.action-button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .share-button,
 .comment-button {
-    background-color: #2196F3;
-    color: #fff;
+    background-color: #1e96fc;
+    font-family: Arial, sans-serif;
+    color: white;
     border: none;
-    padding: 5px 10px;
-    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.comment-button {
-    background-color: #f44336;
+.share-button:hover,
+.comment-button:hover {
+    background-color: #003666;
+    font-color: white;
 }
 
-.sidebar {
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
+ul.beautiful-links {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
-.sidebar li {
-    margin-bottom: 10px;
+ul.beautiful-links li {
+    display: inline-block;
+    margin: 10px;
 }
 
-button {
-    cursor: pointer;
+ul.beautiful-links li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1e96fc;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    opacity: 0.8;
+ul.beautiful-links li a:hover {
+    background-color: #003666;
+    color: white;
 }
