@@ -68,13 +68,35 @@ section {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
-    background-color: #fff;
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-size: cover;
     background-position: center;
     position: relative;
+    background-color: #f0f0f0;
+    ;
+}
+
+
+.profile-image-edit {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cover-photo {
+    flex: 1;
+    height: 200px; /* Adjust the height of the cover photo section */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .edit-cover-photo {
@@ -89,19 +111,42 @@ section {
     transition: transform 1s;
 }
 
+.profile-image-edit:hover {
+    background-color: #0056b3;
+}
+
+
 .profile-image {
-    position: relative;
-    width: 150px;
+     width: 150px;
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Add a pointer cursor for interactivity */
+    position: relative;
+}
+
+.edit-profile-photo {
+    position: absolute;
+    bottom: -10px; /* Adjust the position of the edit icon */
+    right: -10px; /* Adjust the position of the edit icon */
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size of the edit icon */
+    transition: transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c2c2c2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Add a pointer cursor for interactivity */
+    width: 30px;
+    height: 30px;
 }
 
 .edit-icon {
@@ -111,7 +156,7 @@ section {
     background-color: #fff;
     border-radius: 50%;
     padding: 5px;
-    color: #007BFF;
+    color: #fff;
     cursor: pointer;
     font-size: 18px; /* Increase the font size of the edit icon */
     transition: transform 0.2s;
@@ -139,7 +184,10 @@ section {
 
 .profile-info {
     flex: 1;
-    text-align: center; /* Center the text in the profile info */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-info h2 {
@@ -214,6 +262,7 @@ section {
     cursor: pointer;
     transition: background-color 0.2s;
     margin-right: 1rem;
+  
 }
 
 .modal button:hover {
@@ -356,6 +405,12 @@ section {
 
 .interests-section, .education-section {
   margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #f0f0f0;
 }
 
 .interests-section h3, .education-section h3 {
