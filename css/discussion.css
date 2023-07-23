@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    background-color: #1e96fc;
+    padding: 10px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu-bar li a {
+    color: #0a0000;
+    text-decoration: none;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Main content area and sidebar */
+    grid-gap: 20px;
+    padding: 20px;
+}
+.discussion-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-coulmn-gap: 20px;
+  grid-row-gap:20px;
+  padding: 20px;
+  background-color: #2a97ea;
+}
+
+.discussion-post {
+    border: 1px solid #ccc;
+  background-color: #fcf300;
+    padding: 20px;
+    width: 100%;
+}
+
+.reactions {
+    margin: 10px 0;
+}
+
+.reaction-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.share-button,
+.comment-button {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.comment-button {
+    background-color: #f44336;
+}
+
+.sidebar {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
