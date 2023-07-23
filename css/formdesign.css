@@ -11,14 +11,14 @@
 
 body{
   /*I was just testing. We can change the background to a new one.*/
-  background-image: url("https://static.vecteezy.com/system/resources/previews/003/127/954/original/abstract-template-blue-background-white-squares-free-vector.jpg");
+  /*background-image: url("https://static.vecteezy.com/system/resources/previews/003/127/954/original/abstract-template-blue-background-white-squares-free-vector.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   
-	font-family: 'Stick',sans-serif;
+	font-family: Arial,sans-serif;
 	/*viewport height(vh)*/
 	height: 100vh;
-
+  background-color: #1E96FC;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -31,14 +31,24 @@ body{
 .testimonial-container
 {
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    width: 400px;
-}
-.testimonial
-{
-  font-size: 20px;
-  color: 1E96FC;
+    width: 700px;
+  font-size: 30px;
+  color: white;
   display: flex;
   flex-direction: column;
+}
+
+.testimonial
+{
+  font-size: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign
+{
+  align-items: right;
 }
 .container{
 	width: 480px;
@@ -75,7 +85,7 @@ body{
 }
 
 .form-group .form-control::placeholder{
-	font-family: 'Stick',sans-serif;
+	font-family: Arial ,sans-serif;
 	/*color: blue;*/
 	color: rgba(0, 0, 0, 0.5);
 }
